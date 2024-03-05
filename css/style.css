@@ -917,13 +917,20 @@ body {
     display: none;
 }
 
+.Electronics {
+    display: none;
+}
+
+.Sports {
+    display: none;
+}
+
+
 .MAdd {
     display: flex;
     flex-direction: column;
 }
 
 html {
-
     scroll-behavior: smooth;
-
 }

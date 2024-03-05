@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    const Container = document.getElementById('Mobile-Container');
+    const Container = document.getElementById('Electronics-Container');
     async function MobileDisplay() {
         try {
-            const response = await fetch('data/mobile.json');
+            const response = await fetch('data/Electronics.json');
             const data = await response.json();
 
 
-            data.mobiles.forEach(mobile => {
+            data.digitalProducts.forEach(mobile => {
                 const mainBox = document.createElement('div');
                 mainBox.classList.add('MobileCard');
 
@@ -24,7 +24,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 p1.textContent = mobile.brand;
                 const p2 = document.createElement('p');
                 p2.classList.add('MobileCardp2');
-                p2.textContent = mobile.rating;
+                p2.textContent = mobile.title;
+                const p3 = document.createElement('p');
+                p3.classList.add('MobileCardp2');
+                p3.textContent = mobile.price;
 
                 const Box3 = document.createElement('div');
                 Box3.classList.add('ButtonBox');
@@ -61,6 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 Box2.appendChild(p1);
                 Box2.appendChild(p2);
+                Box2.appendChild(p3);
 
                 Box1.appendChild(image);
 

@@ -128,8 +128,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 let checkbutton = 1;
                 addToCartButton.addEventListener('click', function () {
-                    AddCart(phones);
                     if (checkbutton) {
+                        AddCart(phones);
                         addToCartButton.style.backgroundColor = 'green';
                         addToCartButton.style.color = 'white';
                         addToCartButton.textContent = 'Added';
@@ -500,48 +500,62 @@ function subscribe() {
 /// Adding phone screen
 
 let DisplayM = document.querySelector('.Mobile-add');
+let DisplayE = document.querySelector('.Electronics-add');
+let DisplayS = document.querySelector('.Sports-add');
 
+let activePage1 = document.querySelector('#toggle-btn1');
 let activePage3 = document.querySelector('#toggle-btn3');
 let activePage4 = document.querySelector('#toggle-btn4');
 let activePage2 = document.querySelector('#toggle-btn2');
 let MainPage = document.querySelector('.all-container');
 
-let activePage1 = document.querySelector('#toggle-btn1');
 activePage1.addEventListener("click", () => {
     MainPage.classList.remove('Hiding');
     DisplayM.classList.remove('MAdd');
+    DisplayE.classList.remove('MAdd');
+    DisplayS.classList.remove('MAdd');
     activePage1.classList.add('ByDefaultPage');
     activePage3.classList.remove('ByDefaultPage');
     activePage2.classList.remove('ByDefaultPage');
     activePage4.classList.remove('ByDefaultPage');
 })
 
-activePage4.addEventListener("click", () => {
+activePage2.addEventListener("click", () => {
     MainPage.classList.add('Hiding');
-    DisplayM.classList.remove('MAdd');
+    DisplayM.classList.add('MAdd');
+    DisplayE.classList.remove('MAdd');
+    DisplayS.classList.remove('MAdd');
+    activePage2.classList.add('ByDefaultPage');
     activePage1.classList.remove('ByDefaultPage');
     activePage3.classList.remove('ByDefaultPage');
-    activePage2.classList.remove('ByDefaultPage');
-    activePage4.classList.add('ByDefaultPage');
+    activePage4.classList.remove('ByDefaultPage');
 })
 
 activePage3.addEventListener("click", () => {
     MainPage.classList.add('Hiding');
-    DisplayM.classList.remove('MAdd');
+    DisplayM.classList.remove('MAdd')
+    DisplayE.classList.add('MAdd');
+    DisplayS.classList.remove('MAdd');
     activePage3.classList.add('ByDefaultPage');
     activePage1.classList.remove('ByDefaultPage');
     activePage2.classList.remove('ByDefaultPage');
     activePage4.classList.remove('ByDefaultPage');
 
 })
-activePage2.addEventListener("click", () => {
+
+activePage4.addEventListener("click", () => {
     MainPage.classList.add('Hiding');
-    DisplayM.classList.add('MAdd');
-    activePage2.classList.add('ByDefaultPage');
+    DisplayM.classList.remove('MAdd');
+    DisplayE.classList.remove('MAdd');
+    DisplayS.classList.add('MAdd');
     activePage1.classList.remove('ByDefaultPage');
     activePage3.classList.remove('ByDefaultPage');
-    activePage4.classList.remove('ByDefaultPage');
+    activePage2.classList.remove('ByDefaultPage');
+    activePage4.classList.add('ByDefaultPage');
 })
+
+
+
 
 
 // let mobileName = document.querySelector('[mobile-name]');

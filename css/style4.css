@@ -1,8 +1,8 @@
-.electronicsDisplayContainer {
+.sportsDisplayContainer {
     padding: 20px;
 }
 
-.ElectronicsContainer {
+.Sports-Container {
     display: grid;
     gap: 5px;
     grid-template-columns: repeat(5, 1fr);
@@ -10,12 +10,12 @@
 }
 
 @media (max-width: 768px) {
-    .ElectronicsContainer {
+    .Sports-Container {
         grid-template-columns: repeat(4, 1fr);
         padding: 10px;
     }
 
-    .electronicsDisplayContainer {
+    .sportsDisplayContainer {
         padding: 15px;
     }
 
@@ -25,11 +25,11 @@
 }
 
 @media (max-width: 450px) {
-    .electronicsDisplayContainer {
+    .sportsDisplayContainer {
         padding: 10px;
     }
 
-    .ElectronicsContainer {
+    .Sports-Container {
         grid-template-columns: repeat(2, 1fr);
         padding: 2px;
     }
