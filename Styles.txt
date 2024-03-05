@@ -1,0 +1,14 @@
+// To Use ICON we have to add this link in HTML code 
+<script src="https://kit.fontawesome.com/74653ff230.js" crossorigin="anonymous"></script>
+/*** font Awesome ***/
+
+// Font Link
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;1,300;1,400&display=swap');
+1. ExtraLight 200
+2. Light 300
+3. Light 300 italic
+4. Regular 400
+5. Regular 400 italic
+
+// Color Scheme 
+1. Dark Blue --> #252B42

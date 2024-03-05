@@ -1,0 +1,60 @@
+{
+    "mobile_phones": [
+        {
+            "brand": "Samsung Galaxy S22",
+            "specs": {
+                "display": "6.2 inches, Dynamic AMOLED",
+                "processor": "Exynos 2100 (Global) / Snapdragon 888 (USA)",
+                "ram": "8GB",
+                "storage": "128GB / 256GB",
+                "camera": "12 MP (wide) + 12 MP (ultrawide) + 64 MP (telephoto)",
+                "battery": "4000 mAh"
+            },
+            "imgSrc": "https://rukminim2.flixcart.com/image/832/832/xif0q/mobile/0/v/o/-original-imagth5xdvsmprdd.jpeg?q=70&crop=false",
+            "price": "₹58000",
+            "sale": "No Sale"
+        },
+        {
+            "brand": "Apple iPhone 15",
+            "specs": {
+                "display": "6.1 inches, Super Retina XDR",
+                "processor": "A15 Bionic",
+                "ram": "4GB",
+                "storage": "128GB / 256GB / 512GB",
+                "camera": "12 MP (wide) + 12 MP (ultrawide) + 12 MP (telephoto)",
+                "battery": "3100 mAh"
+            },
+            "imgSrc": "https://www.imagineonline.store/cdn/shop/files/iPhone_15_Black_PDP_Image_Position-1__en-IN_7886e0dd-39c5-46cc-8904-2da66e9a1a4f_823x.jpg?v=1694605329",
+            "price": "₹62999",
+            "sale": "No Sale"
+        },
+        {
+            "brand": "Samsung Galaxy S24 Ultra",
+            "specs": {
+                "display": "6.7 inches, Fluid AMOLED",
+                "processor": "Snapdragon 888",
+                "ram": "8GB / 12GB",
+                "storage": "128GB / 256GB",
+                "camera": "48 MP (wide) + 50 MP (ultrawide) + 8 MP (telephoto)",
+                "battery": "4500 mAh"
+            },
+            "imgSrc": "https://images.samsung.com/in/smartphones/galaxy-s24-ultra/buy/product_color_black.png?imwidth=480",
+            "price": "₹135000",
+            "sale": "No Sale"
+        },
+        {
+            "brand": "OnePlus 11R 5G",
+            "specs": {
+                "display": "6.7 inches, Fluid AMOLED",
+                "processor": "Snapdragon 888",
+                "ram": "8GB / 12GB",
+                "storage": "128GB / 256GB",
+                "camera": "48 MP (wide) + 50 MP (ultrawide) + 8 MP (telephoto)",
+                "battery": "4500 mAh"
+            },
+            "imgSrc": "https://m.media-amazon.com/images/I/41etLpNZV6L._SX300_SY300_QL70_FMwebp_.jpg",
+            "price": "₹39999",
+            "sale": "No Sale"
+        }
+    ]
+}

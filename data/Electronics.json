@@ -1,0 +1,28 @@
+{
+    "digitalProducts": [
+        {
+            "brand": "LG",
+            "imgSrc": "https://m.media-amazon.com/images/I/61KTSu7mEbL._SX679_.jpg",
+            "title": "655 L Frost-Free Inverter Side-By-Side Refrigerator",
+            "price": "₹72,990"
+        },
+        {
+            "brand": "IFB",
+            "imgSrc": "https://rukminim2.flixcart.com/image/832/832/xif0q/air-conditioner-new/x/j/s/-original-imagmh8cmacfpmg8.jpeg?q=70&crop=false",
+            "title": " 1.5 Ton 3 Star Split Inverter AC with Wi-fi Connect",
+            "price": "₹36,990"
+        },
+        {
+            "brand": "Canon",
+            "imgSrc": "https://rukminim2.flixcart.com/image/832/832/jfbfde80/camera/n/r/n/canon-eos-eos-3000d-dslr-original-imaf3t5h9yuyc5zu.jpeg?q=70&crop=false",
+            "title": "EOS 3000D DSLR Camera",
+            "price": "₹31,990"
+        },
+        {
+            "brand": "Havells",
+            "imgSrc": "https://m.media-amazon.com/images/I/51zfltcF4hL._SX679_.jpg",
+            "title": "Instanio 3-Litre Instant Geyser",
+            "price": "₹3,598"
+        }
+    ]
+}

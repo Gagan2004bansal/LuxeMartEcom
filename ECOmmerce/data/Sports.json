@@ -1,0 +1,28 @@
+{
+    "digitalProducts": [
+        {
+            "brand": "NIVIA",
+            "imgSrc": "https://m.media-amazon.com/images/I/81NiLcCkBbL._SX679_.jpg",
+            "title": "Trainer Football, Rubberized Stitched Football",
+            "price": "₹799"
+        },
+        {
+            "brand": "Li-ning",
+            "imgSrc": "https://strapiproduction-16636.kxcdn.com/uploads/template_01_4_3_9f27c33273/template_01_4_3_9f27c33273.jpg?width=1920&quality=99",
+            "title": " G-FORCE SUPERLITE MAX 9",
+            "price": "₹1,690"
+        },
+        {
+            "brand": "MRF",
+            "imgSrc": "https://m.media-amazon.com/images/I/61E0FaUDd-L._SY879_.jpg",
+            "title": "1CT15110 Champ Kashmir Willow Cricket Bat",
+            "price": "1,199"
+        },
+        {
+            "brand": "Fitness Mantra®",
+            "imgSrc": "https://m.media-amazon.com/images/I/41tRqFr5aVL._SY300_SX300_QL70_FMwebp_.jpg",
+            "title": "6mm EVA Yoga Mat with Carrying Strap for Gym",
+            "price": "₹399"
+        }
+    ]
+}
