@@ -40,7 +40,11 @@
             <h1 class="brand-name">LuxeMart</h1>
         </div>
         <div class="search-bar">
-            <input type="search" placeholder=" 🔍  Search essentials, groceries and more..." class="search-box">
+            <form id="searchData" onsubmit="searchData(event)" class="SearchForm">
+                <input type="search" name="search" id="SearchBar" placeholder="Search essentials, groceries and more..."
+                    class="search-box" required>
+                <button type="submit" class="searchBtn">🔍</button>
+            </form>
         </div>
         <div class="options">
             <div>
@@ -49,8 +53,8 @@
                         Up</span></a>
             </div>
             <div>|</div>
-            <div class="Cart"><i class="fa-solid fa-cart-shopping"></i> <span class="Cart-hidden"
-                    onclick="Cart()">Cart</span>
+            <div class="Cart" id="CartButton"><i class="fa-solid fa-cart-shopping"></i> <span
+                    class="Cart-hidden">Cart</span>
             </div>
         </div>
     </div>
@@ -75,7 +79,7 @@
         </div>
     </div>
 
-    <div class="all all-container" id="mainBody">
+    <div class="all all-container Content-scroll" id="mainBody">
         <!-- Slider Ad -->
         <div class="Slider">
             <div class="Container-AD">
@@ -372,7 +376,7 @@
     </div>
 
 
-    <div class="Mobile Mobile-add" id="mobile">
+    <div class="Mobile Mobile-add Content-scroll" id="mobile">
 
         <div class="mobileDisplayContainer">
             <div class="Display-head">
@@ -387,7 +391,7 @@
         </div> -->
     </div>
 
-    <div class="Electronics Electronics-add" id="electronics">
+    <div class="Electronics Electronics-add Content-scroll" id="electronics">
 
         <div class="electronicsDisplayContainer">
             <div class="Display-head">
@@ -402,18 +406,18 @@
         </div> -->
     </div>
 
-    <div class="Sports Sports-add" id="sports">
+    <div class="Sports Sports-add Content-scroll" id="sports">
 
         <div class="sportsDisplayContainer">
             <div class="Display-head">
-                <div class="deals">Enjoy with<span>Sports</span></div>
+                <div class="deals">Enjoy with<span> Sports</span></div>
             </div>
             <div class="SportsContainer" id="Sports-Container">
             </div>
         </div>
 
         <div class="errorRequest">
-            404 error bad request
+            404 ERROR
         </div>
     </div>
 
@@ -423,6 +427,7 @@
     <script src="main.js"></script>
     <script src="Mobile.js"></script>
     <script src="Electronics.js"></script>
+    <script src="search.js"></script>
 </body>
 
 </html>

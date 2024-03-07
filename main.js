@@ -40,25 +40,35 @@ function DropOff() {
     };
 }
 
-let AddCartOn = true;
+let AddCartOn = false;
 function Cart() {
     let header3 = document.getElementById('header3');
     let content = document.getElementById('mainBody');
     let Mobile = document.getElementById('mobile');
+    let Electronics = document.getElementById('electronics');
+    let Sports = document.getElementById('sports');
 
-    if (AddCartOn) {
+    if (!AddCartOn) {
         header3.classList.add('Hiding');
         content.classList.add('Hiding');
         Mobile.classList.add('Hiding');
-        AddCartOn = false;
+        Electronics.classList.add('Hiding');
+        Sports.classList.add('Hiding');
+        AddCartOn = true;
     }
     else {
         header3.classList.remove('Hiding');
         content.classList.remove('Hiding');
         Mobile.classList.remove('Hiding');
-        AddCartOn = true;
+        Electronics.classList.remove('Hiding');
+        Sports.classList.remove('Hiding');
+        AddCartOn = false;
     }
 }
+
+let CartBtn = document.getElementById('CartButton').addEventListener('click', () => {
+    Cart()
+});
 
 function AddCart(phones) {
     try {

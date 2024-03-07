@@ -22,6 +22,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 const p1 = document.createElement('p');
                 p1.classList.add('MobileCardp1');
                 p1.textContent = mobile.brand;
+                const p3 = document.createElement('p');
+                p3.classList.add('MobileCardp2');
+                p3.textContent = mobile.price;
                 const p2 = document.createElement('p');
                 p2.classList.add('MobileCardp2');
                 p2.textContent = mobile.rating;
@@ -60,6 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 Box3.appendChild(Btn2);
 
                 Box2.appendChild(p1);
+                Box2.appendChild(p3);
                 Box2.appendChild(p2);
 
                 Box1.appendChild(image);

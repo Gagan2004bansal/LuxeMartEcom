@@ -120,7 +120,12 @@ body {
 .search-bar {
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 16px;
+}
+
+.SearchForm {
+    display: flex;
 }
 
 .search-box {
@@ -138,6 +143,12 @@ body {
     color: #008ECC;
     justify-content: space-evenly;
 }
+
+.searchBtn {
+    all: unset;
+    margin-left: 5px;
+}
+
 
 .Signin {
     color: #008ECC;
@@ -898,6 +909,10 @@ body {
     }
 }
 
+.Content-scroll {
+    height: 75vh;
+    overflow-y: scroll;
+}
 
 .all {
     display: flex;
