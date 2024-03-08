@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LuxeMart - Sign up</title>
+    <title>LuxeMart - Log in</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -14,7 +14,7 @@
             <div class="text-sky-400 text-[30px] px-2 font-serif font-bold lg:text-[50px] lg:px-10 md:px-5">LuxeMart
             </div>
 
-            <p class="px-2 text-[15px] lg:px-10">Sign Up</p>
+            <p class="px-2 text-[15px] lg:px-10">Sign In</p>
             <div class="px-2 flex flex-col lg:px-10 md:px-5">
                 <form id="formData" class="flex flex-col">
                     <input type="email" name="email" id="email" class="my-2 bg-slate-200 py-1 px-3 rounded-md"
@@ -23,17 +23,18 @@
                         placeholder="Password">
                     <button type="submit" id="submit"
                         class="bg-sky-600 px-3 py-2 m-3 w-40 text-white rounded-xl cursor-pointer shadow-md lg:mx-10 md:mx-5">Sign
-                        up</button>
+                        in</button>
                 </form>
+                <p class="text-red-500 px-2 text-[10px] cursor-pointer">forgot your password?</p>
             </div>
             <div class="flex gap-2 p-2 text-[12px] lg:px-10 md:px-5">
-                <p>Have an account? </p>
-                <a href="login.html" class="text-sky-500" id="loginHandler">Sign in now</a>
+                <p>Don't Have an account? </p>
+                <a href="signin.html" class="text-sky-500">Create new Account</a>
             </div>
         </div>
     </div>
 
-    <script type="module" src="signup.js"></script>
+    <script type="module" src="login.js"></script>
 </body>
 
 </html>

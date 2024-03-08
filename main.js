@@ -5,20 +5,18 @@ showSlides();
 function showSlides() {
     let i;
     let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
     slideIndex++;
     if (slideIndex > slides.length) { slideIndex = 1 }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
     slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
     setTimeout(showSlides, 3000);
 }
 
+function MainPageHandler() {
+    window.location.href = "index.html";
+}
 
 function DropOffer() {
     let show = document.getElementById('popOffer');
@@ -33,27 +31,28 @@ function DropOff() {
     let btttn = document.getElementById('cross');
     let show = document.getElementById('popOffer');
 
-    if (show.style.display === "none") {
-        show.style.display = "block";
-    } else {
+    if (show.style.display === "block") {
         show.style.display = "none";
+    } else {
+        show.style.display = "block";
     };
 }
 
 let AddCartOn = false;
+let header3 = document.getElementById('header3');
+let content = document.getElementById('mainBody');
+let Mobile = document.getElementById('mobile');
+let Electronics = document.getElementById('electronics');
+let Sports = document.getElementById('sports');
+let CartShow = document.getElementById('showingCart');
 function Cart() {
-    let header3 = document.getElementById('header3');
-    let content = document.getElementById('mainBody');
-    let Mobile = document.getElementById('mobile');
-    let Electronics = document.getElementById('electronics');
-    let Sports = document.getElementById('sports');
-
     if (!AddCartOn) {
         header3.classList.add('Hiding');
         content.classList.add('Hiding');
         Mobile.classList.add('Hiding');
         Electronics.classList.add('Hiding');
         Sports.classList.add('Hiding');
+        CartShow.classList.add('CartBox1');
         AddCartOn = true;
     }
     else {
@@ -62,6 +61,7 @@ function Cart() {
         Mobile.classList.remove('Hiding');
         Electronics.classList.remove('Hiding');
         Sports.classList.remove('Hiding');
+        CartShow.classList.remove('CartBox1');
         AddCartOn = false;
     }
 }
@@ -70,15 +70,89 @@ let CartBtn = document.getElementById('CartButton').addEventListener('click', ()
     Cart()
 });
 
-function AddCart(phones) {
+
+async function AddCart(phones) {
     try {
+        const containerCart = document.querySelector('.containerDesign');
+
+        const Name = document.createElement('div');
+        Name.textContent = phones.brand;
+
+        const Price = document.createElement('div');
+        Price.textContent = phones.price;
+
+
+        const Image = document.createElement('img');
+        Image.classList.add('ImageCart')
+        Image.src = phones.imgSrc;
+
+
+        const box1 = document.createElement('div');
+        box1.classList.add('CartBox1');
+        const box2 = document.createElement('div');
+        box2.classList.add('CartBox2');
+
+
+        box1.appendChild(Name);
+        box1.appendChild(Price);
+        box2.appendChild(Image);
+
+        const ContainerBox = document.createElement('div');
+        ContainerBox.classList.add('CartCard');
+        ContainerBox.appendChild(box1);
+        ContainerBox.appendChild(box2);
+
+        containerCart.appendChild(ContainerBox);
+
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        cartItems.push(phones);
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
         console.log("Added to Cart:", phones.brand, "| Price:", phones.price);
     } catch (error) {
-        console.log("Error in Adding element");
+        console.log("Error in Adding element to cart");
     }
 }
 
+function displayCartItems() {
+    const containerCart = document.querySelector('.containerDesign');
+    containerCart.innerHTML = ''; // Clear existing content
 
+    // Retrieve items from local storage
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+    // Display each item in the cart
+    cartItems.forEach(phones => {
+        const Name = document.createElement('div');
+        Name.textContent = phones.brand;
+
+        const Price = document.createElement('div');
+        Price.textContent = phones.price;
+
+        const Image = document.createElement('img');
+        Image.classList.add('ImageCart')
+        Image.src = phones.imgSrc;
+
+
+        const box1 = document.createElement('div');
+        box1.classList.add('CartBox1');
+        const box2 = document.createElement('div');
+        box2.classList.add('CartBox2');
+
+        box1.appendChild(Name);
+        box1.appendChild(Price);
+        box2.appendChild(Image);
+
+        const ContainerBox = document.createElement('div');
+        ContainerBox.classList.add('CartCard');
+        ContainerBox.appendChild(box1);
+        ContainerBox.appendChild(box2);
+
+        containerCart.appendChild(ContainerBox);
+    });
+}
+
+displayCartItems();
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -145,6 +219,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         addToCartButton.textContent = 'Added';
                         showToast("Added Successfully", "success", 5000);
                         addToCartButton.style.opacity = 1;
+
                         checkbutton = 0;
                     }
                     else {
@@ -632,4 +707,3 @@ const showToast = (
 
     document.body.appendChild(box)
 };
-
