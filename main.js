@@ -299,6 +299,7 @@ async function WatchesDisplay() {
             let checkbutton = 1;
             addToCartButton.addEventListener('click', function () {
                 if (checkbutton) {
+                    AddCart(watch);
                     addToCartButton.style.backgroundColor = 'green';
                     addToCartButton.style.color = 'white';
                     addToCartButton.textContent = 'Added';
@@ -425,6 +426,7 @@ async function ElectronicsDisplay() {
             let checkbutton = 1;
             addToCartButton.addEventListener('click', function () {
                 if (checkbutton) {
+                    AddCart(products);
                     addToCartButton.style.backgroundColor = 'green';
                     addToCartButton.style.color = 'white';
                     addToCartButton.textContent = 'Added';
@@ -507,6 +509,7 @@ async function SportsDisplay() {
             let checkbutton = 1;
             addToCartButton.addEventListener('click', function () {
                 if (checkbutton) {
+                    AddCart(products);
                     addToCartButton.style.backgroundColor = 'green';
                     addToCartButton.style.color = 'white';
                     addToCartButton.textContent = 'Added';

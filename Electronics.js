@@ -43,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 let checkbutton = 1;
                 Btn2.addEventListener('click', function () {
                     if (checkbutton) {
+                        AddCart(mobile);
                         Btn2.style.backgroundColor = 'green';
                         Btn2.style.color = 'white';
                         Btn2.textContent = 'Added';
