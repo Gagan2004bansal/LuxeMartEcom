@@ -2,7 +2,7 @@ async function searchData(event) {
     event.preventDefault();
 
     try {
-        var response = await fetch('./data/Catogery.json');
+        var response = await fetch('./data/mobile.json');
         var jsonData = await response.json();
 
         let Search = document.querySelector("#SearchBar").value;
